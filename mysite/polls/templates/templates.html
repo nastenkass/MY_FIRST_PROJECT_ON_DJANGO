@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>templates</title>
+    <link rel="stylesheet" href='{% static "templates.css" %}'>
+</head>
+
+<header>
+  <div class="container_head">
+    <div class="text_head">
+      ПРИВЕТ
+    </div>
+    <div class="text_head">
+      PRIVET
+    </div>
+    <div class="text_head">
+      HELLO
+    </div>
+  </div>
+</header>
+
+<body>
+
+  {% block body %}
+
+  {% endblock %}
+
+</body>
+
+<footer>
+  <div class="container_foot">
+    <div class="text_foot">
+      ПРИВЕТ
+    </div>
+    <div class="text_foot">
+      PRIVET
+    </div>
+    <div class="text_foot">
+      HELLO
+    </div>
+  </div>
+</footer>
+</html>

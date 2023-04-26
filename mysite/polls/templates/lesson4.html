@@ -1,0 +1,44 @@
+{% extends 'templates.html' %}
+{% block body %}
+
+    <div class="content">
+
+      {% if name %}
+
+      <h1> ПРИВЕТСТВУЮ, {{name}}!</h1>
+
+      {% else %}
+
+      <h2>  Ты кто? </h2>
+
+      {% endif%}
+
+      <div class="names">
+        <a href="/lesson4/?name=Настя">Настя</a>
+        <a href="/lesson4/?name=Пиво">Пиво</a>
+        <a href="/lesson4/?name=Никитка">Никита</a>
+      </div>
+
+      <div style="padding:20px">
+        <h2> Расскажи тогда кто ты ? </h2>
+        <form action="/lesson4" method="get">
+          <input type="text" name="name">
+          <button type="submit"> Это я </button>
+        </form>
+      </div>
+
+    </div>
+
+{% endblock %}
+
+<style>
+
+    .names{
+        padding: 20px;
+    }
+
+    .names a {
+      text-decoration: none;
+    }
+
+</style>
