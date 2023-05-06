@@ -1,7 +1,12 @@
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
+from polls.models import Feedback
 
 def index(request):
+    feedback = Feedback.objects.create()
+    feedback.email = '123123@mail.ru'
+    feedback.text = '123123'
+    feedback.save()
     return render(request, 'index.html', {})
 
 

@@ -4,21 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <title>templates</title>
-    <link rel="stylesheet" href='{% static "templates.css" %}'>
+    <link rel="stylesheet" href='{% static "shblon.css" %}'>
 </head>
 
 <header>
-  <div class="container_head">
-    <div class="text_head">
-      ПРИВЕТ
+
+    <div class="header-container">
+
+        <nav>
+            <a href="#" class="active_header"> Shop </a>
+            <a href="#"> Collections </a>
+            <a href="#"> About </a>
+        </nav>
+
+        <div class="header-logo">
+            <img src='{% static "header_logo.svg" %}'>
+        </div>
+
+        <div class="header-image">
+            <img src='{% static "header_icon_acount.svg" %}'>
+            <img src='{% static "header_icon_cart.svg" %}'>
+        </div>
+
     </div>
-    <div class="text_head">
-      PRIVET
-    </div>
-    <div class="text_head">
-      HELLO
-    </div>
-  </div>
+
+    <div class="header-line"> </div>
+
 </header>
 
 <body>
@@ -30,16 +41,87 @@
 </body>
 
 <footer>
-  <div class="container_foot">
-    <div class="text_foot">
-      ПРИВЕТ
+
+    <div class="container-f">
+        <div class="footer-container">
+            <div class="footer-container-items">
+                <h2 class="david-h2">
+                    David Webb
+                </h2>
+            </div>
+            <div class="footer-container-items">
+                <div class="footer-text w-125">
+                    <h2 class="footer-h2">
+                        Client  services
+                    </h2>
+                    <p class="footer-text">
+                        Shipping and Returns
+                        Special Commissions
+                        Authentications
+                        Product Care and Repairs
+                        Sourcing and Sustainability
+                        Sizing
+                    </p>
+                </div>
+            </div>
+            <div class="footer-container-items">
+                <div class="footer-container-items-2">
+                    <div class="footer-text-2 w-112">
+                        <p class="text-2">
+                            Please call or email for any information or to make an appointment at one of our boutiques.
+                        </p>
+                        <p class="text-2">
+                            +1 (212) 421 3030
+                        </p>
+                        <div class="footer-icons">
+                            <img src='{% static "icon_footer_1.svg" %}'>
+                            <img src='{% static "icon_footer_2.svg" %}'>
+                            <img src='{% static "icon_footer_3.svg" %}'>
+                        </div>
+                    </div>
+                    <div class="footer-text w-101">
+                        <h2 class="footer-h2">
+                            Contact
+                        </h2>
+                        <p class="footer-text">
+                            Contact Us
+                            Book an Appointment
+                            Careers
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-container-items">
+                <div class="footer-container-items-2">
+                    <div>
+
+                    </div>
+                    <div>
+                        <div class="footer-text w-207">
+                            <h2 class="footer-h2">
+                                SIGN UP
+                            </h2>
+                            <p class="footer-text">
+                                Be the first to hear about new arrivals from our extraordinary workshop, special events, and other news from the world of David Webb.
+                            </p>
+
+                            <input name="email_singup" type="email">
+                            <div class="email">
+                                <div class="email-item-2">
+                                    <div class="emails-item">
+                                        <div class="email-text">email</div>
+                                        <img src='{% static "strelochka_2.svg" %}'>
+                                    </div>
+                                </div>
+                                <div class="line-email"> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </div>
-    <div class="text_foot">
-      PRIVET
+
     </div>
-    <div class="text_foot">
-      HELLO
-    </div>
-  </div>
+
 </footer>
 </html>
