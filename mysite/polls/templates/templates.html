@@ -12,18 +12,18 @@
     <div class="header-container">
 
         <nav>
-            <a href="#" class="active_header"> Shop </a>
+            <a href="/catalog"> Shop </a>
             <a href="#"> Collections </a>
             <a href="#"> About </a>
         </nav>
 
         <div class="header-logo">
-            <img src='{% static "header_logo.svg" %}'>
+            <a href="/index"><img src='{% static "header_logo.svg" %}'></a>
         </div>
 
         <div class="header-image">
             <img src='{% static "header_icon_acount.svg" %}'>
-            <img src='{% static "header_icon_cart.svg" %}'>
+            <a href="/order"><img src='{% static "header_icon_cart.svg" %}'></a>
         </div>
 
     </div>
@@ -105,7 +105,7 @@
                                 Be the first to hear about new arrivals from our extraordinary workshop, special events, and other news from the world of David Webb.
                             </p>
 
-                            <input name="email_singup" type="email">
+
                             <div class="email">
                                 <div class="email-item-2">
                                     <div class="emails-item">

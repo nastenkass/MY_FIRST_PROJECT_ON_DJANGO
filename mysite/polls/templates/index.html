@@ -1,15 +1,24 @@
 {% extends 'templates.html' %}
 {% block body %}
-    {% load static %}
 
-    <h1 align="center">
-        ПРИВЕТСТВУЮ!
-    </h1>
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='{% static "css/style.css" %}'>
+    <script src=''></script>
+    <title>Главная страница</title>
+</head>
+<body>
 
-    <a href="/lesson4" class="button">
-           lesson4 (приветствие с именами, запрос get через адресную строку)
-    </a>
-    <img src='{% static "instagram-64.png" %}' alt="">
+    <div> ПРИВЕТ </div>
+
+</body>
+
+
 
 
 {% endblock %}

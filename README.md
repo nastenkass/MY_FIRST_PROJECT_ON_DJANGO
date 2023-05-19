@@ -1,0 +1,1 @@
+[схемабд]https://dbdiagram.io/d

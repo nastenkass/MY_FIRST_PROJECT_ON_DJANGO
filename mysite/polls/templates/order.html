@@ -1,0 +1,198 @@
+{% extends 'templates.html' %}
+{% block body %}
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='{% static "css/order.css" %}'>
+    <script src='{% static "js/order-js.js" %}'></script>
+    <title>order</title>
+</head>
+<body>
+
+    <main>
+        <div class="full-container">
+            <div class="full-container-1 w-727">
+
+                <h1 class="margin-t-100"> chekout </h1>
+
+                <div class="order-block-1 margin-t-80">
+
+                    <div class="order-item-block-1">
+                        <h2 class="margin-b-30"> contact information </h2>
+                        <input type="text" class="input_style_1 margin-b-30" placeholder="first name" />
+                        <input type="tel" class="input_style_1" placeholder="mobile phone"/>
+                    </div>
+
+                    <div class="order-item-block-1">
+                        <div class="invisible-34 margin-b-30"> </div>
+                        <input type="text" class="input_style_1 margin-b-30" placeholder="last name" />
+                        <input type="email" class="input_style_1" placeholder="email"/>
+                    </div>
+
+                </div>
+
+                <div class="order-block-1 margin-t-80">
+
+                    <div class="order-item-block-1">
+                        <h2 class="margin-b-30"> shipping address </h2>
+                        <input type="text" class="input_style_1 margin-b-30" placeholder="country/region" />
+                        <input type="text" class="input_style_1" placeholder="address"/>
+                    </div>
+
+                    <div class="order-item-block-1">
+                        <div class="invisible-34 margin-b-30"> </div>
+                        <input type="text" class="input_style_1 margin-b-30" placeholder="city" />
+                        <input type="email"class="input_style_1"  placeholder="postal code"/>
+                    </div>
+
+                </div>
+
+                <div class="order-block-2 margin-t-90">
+
+                    <h2> shipping method </h2>
+
+                    <div class="order-item-block-2-global">
+
+                        <div class="order-item-block-2">
+                            <div>
+                                <input type="radio" id="shipping_method_1" name="rb" class="custom-radio"/>
+                                <label for="shipping_method_1"> express shipping </label>
+                                <p class="radio-hint"> Next day </p>
+                            </div>
+                            <div class="item-cost">
+                                <p class="cost"> 50$ </p>
+                            </div>
+                        </div>
+
+                        <div class="order-item-block-2">
+                            <div>
+                                <input type="radio" id="shipping_method_2" name="rb" class="custom-radio"/>
+                                <label for="shipping_method_2"> regular shipping </label>
+                                <p class="radio-hint"> 3-14 business days </p>
+                            </div>
+                            <div class="item-cost">
+                                <p class="cost"> 24$ </p>
+                            </div>
+                        </div>
+
+                        <div class="order-item-block-2">
+                            <div>
+                                <input type="radio" id="shipping_method_3" name="rb" class="custom-radio" checked />
+                                <label for="shipping_method_3"> free shiping </label>
+                                <p class="radio-hint"> 7-30 business days </p>
+                            </div>
+                            <div class="item-cost">
+                                <p class="cost"> 0$ </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="order-block-2 margin-t-90">
+
+                    <div class="order-item-block-2-global">
+
+                        <h2> PAYMENT </h2>
+
+                        <div class="order-item-block-2">
+                            <div class="pay-credit">
+                                <div>
+                                    <input type="radio" id="pay_method_1" value="pay_method_1" name="credit_1" class="custom-radio-2" onchange="toggleDiv(this)"/>
+                                    <label for="pay_method_1"> credit card </label>
+                                </div>
+                                <div id="textInput" class="fade-in">
+                                    <input type="text" class="input_style_2 margin-t-15" placeholder="Card Number">
+                                    <input type="text" class="input_style_2 margin-t-15" placeholder="Name on card">
+                                    <div class="card-input margin-t-15">
+                                        <input type="text" class="input_style_3" placeholder="Expiration date (MM/YY)">
+                                        <input type="text" class="input_style_3" placeholder="cvv">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="order-item-block-2">
+                            <input type="radio" id="pay_method_2" value="pay_method_2" name="credit_1" class="custom-radio-2" onchange="toggleDiv(this)" checked/>
+                            <label for="pay_method_2"> paypal </label>
+                        </div>
+
+                        <div class="order-item-block-2">
+                            <input type="radio" id="pay_method_3" value="pay_method_3" name="credit_1" class="custom-radio-2" onchange="toggleDiv(this)"/>
+                            <label for="pay_method_3"> googlepay </label>
+                        </div>
+
+                        <div class="order-item-block-2">
+                            <input type="radio" id="pay_method_4" value="pay_method_4" name="credit_1" class="custom-radio-2" onchange="toggleDiv(this)"/>
+                            <label for="pay_method_4"> shoppay </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="line margin-t-55">
+
+                </div>
+
+                <div class="confirmation margin-t-25">
+                    <input type="checkbox" id="confirmation" class="custom-checkbox">
+                    <label for="confirmation">By proceeding I accept  <span> &nbsp; terms and conditoins </span></label>
+                </div>
+
+                <div class="submit-button margin-t-25">
+                    <button type="submit" class="order-button"> Pay and make order </button>
+                </div>
+
+            </div>
+
+
+
+            <div class="full-container-2 w-613">
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
+
+{% endblock %}
+
+ <!-- Date Field
+                        <div class="date-field">
+                        <div class="month">
+                          <select name="Month">
+                            <option value="january">January</option>
+                            <option value="february">February</option>
+                            <option value="march">March</option>
+                            <option value="april">April</option>
+                            <option value="may">May</option>
+                            <option value="june">June</option>
+                            <option value="july">July</option>
+                            <option value="august">August</option>
+                            <option value="september">September</option>
+                            <option value="october">October</option>
+                            <option value="november">November</option>
+                            <option value="december">December</option>
+                          </select>
+                        </div>
+                        <div class="year">
+                          <select name="Year">
+                            <option value="2016">2016</option>
+                            <option value="2017">2017</option>
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </form>

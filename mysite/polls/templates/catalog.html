@@ -1,10 +1,161 @@
+{% extends 'templates.html' %}
+{% block body %}
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='{% static "css/catalog.css" %}'>
+    <script src='{% static "js/catalog.js" %}'></script>
+    <title>магаз</title>
 </head>
 <body>
-  ПРИВЕТ ВСЕМ
+
+<main>
+        <div class="zagolovok">
+            <p> All jewellery </p>
+        </div>
+        <div class="filters">
+            <div class="filters-item-2">
+                <div class="filters-item">
+                    <div class="filtr-text">filters</div>
+                    <img src='{% static "content/strelochka.svg" %}'>
+                </div>
+                <div class="line-filters"> </div>
+            </div>
+
+            <div class="filters-item-2">
+                <div class="filters-item">
+                    <div class="sort">
+                        <div class="filtr-text">Sort by:</div>
+                        <div class="filtr-dop-text">FEATURED</div>
+                    </div>
+                    <img src='{% static "content/strelochka.svg" %}'>
+                </div>
+                <div class="line-filters"> </div>
+            </div>
+        </div>
+        <div class="catalog-1">
+            <div class="catalog-1-item">
+                <img src='{% static "content/catalog_item_1.svg" %}'/>
+                <h2 class="catalog-h2"> Diamond Pear and Earings </h2>
+                <p class="catalog-p"> $480,000 </p>
+            </div>
+            <div class="catalog-1-item-text">
+                <div class="catalog-1-text">
+                    brightly hued enamel and color-saturated semiprecious stones like
+                    coral, azurmalachite and turquoise, the notable
+                    exception being the clear, elegant rock crystal.
+                </div>
+            </div>
+            <div class="catalog-1-item">
+                <a href="#">
+                    <div class="catalog-imgs">
+<!--                        <img src='{% static "content/catalog_item_2.svg" %}'/>-->
+                        <img class="catalog-img" src='{% static "content/catalog_item_2.svg" %}' data-initial-src='{% static "content/catalog_item_2.svg" %}' data-hover-src='{% static "content/hover_catalog_item_2.svg" %}' onmouseover="changeImage(this)" onmouseout="resetImage(this)">
+                    </div>
+                    <h2 class="catalog-h2"> Repoussé Rabbit Cuff </h2>
+                    <p class="catalog-p"> $480,000 </p>
+                </a>
+            </div>
+            <div class="catalog-1-item">
+                <img src='{% static "content/catalog_item_3.svg" %}'>
+                <h2 class="catalog-h2"> Virgo Zodiac Pendant Necklace </h2>
+                <p class="catalog-p"> $4,900 </p>
+            </div>
+        </div>
+        <div class="catalog-2">
+            <div class="catalgon-2-item">
+                <img src='{% static "content/catalog_item_4.svg" %}'>
+            </div>
+            <div class="catalgon-2-item">
+                <img class="catalog-img" src='{% static "content/catalog_item_5.svg" %}' data-initial-src='{% static "content/catalog_item_5.svg" %}' data-hover-src='{% static "content/hover_catalog_item_5.svg" %}' onmouseover="changeImage(this)" onmouseout="resetImage(this)">
+                <div class="w-189">
+                    <h2 class="catalog-h2"> Zebra Stripe Double Hoop Earrings </h2>
+                    <p class="catalog-p"> $19,500 </p>
+                </div>
+            </div>
+            <div class="catalgon-2-item item-down">
+                <img src='{% static "content/catalog_item_6.svg" %}'>
+                <div class="w-251">
+                    <h2 class="catalog-h2"> Baby Frog Bangle with Emerald Eyes, White Enamel </h2>
+                    <p class="catalog-p"> $23,500 </p>
+                </div>
+            </div>
+        </div>
+        <div class="catalog-3">
+            <div class="catalog-3-item item-down">
+                <img src='{% static "content/catalog_item_7.svg" %}' alt="">
+                <h2 class="catalog-h2"> Zebra Bracelet </h2>
+                <p class="catalog-p"> $78,500 </p>
+            </div>
+            <div class="catalog-3-item">
+                <img class="catalog-img" src='{% static "content/catalog_item_8.svg" %}' data-initial-src='{% static "content/catalog_item_8.svg" %}' data-hover-src='{% static "content/hover_catalog_item_8.svg" %}' onmouseover="changeImage(this)" onmouseout="resetImage(this)">
+                <h2 class="catalog-h2"> Zebra Ring </h2>
+                <p class="catalog-p"> $17,900 </p>
+            </div>
+            <div class="catalog-3-item">
+                <img src='{% static "content/catalog_item_9.svg" %}' alt="">
+            </div>
+        </div>
+        <div class="catalog-1">
+            <div class="catalog-item-1">
+                <img src='{% static "content/catalog_item_10.svg" %}' alt="">
+                <h2 class="catalog-h2"> Janus Earrings </h2>
+                <p class="catalog-p"> $32,000 </p>
+            </div>
+            <div class="catalog-item-1">
+                <img src='{% static "content/catalog_item_11.svg" %}' alt="">
+                <h2 class="catalog-h2"> Buckle Ring, Ebony </h2>
+                <p class="catalog-p"> $8,200 </p>
+            </div>
+            <div class="catalog-1-item-text">
+                <div class="catalog-1-text w-251">
+                    The first animal bracelet appeared in 1957, unleashing a
+                    near-obsession with whatever could fly, crawl, swim or
+                    run.
+                </div>
+            </div>
+            <div class="catalog-item-1">
+                <img src='{% static "content/catalog_item_12.svg" %}' alt="">
+                <h2 class="catalog-h2"> Baby Giraffe Bangle </h2>
+                <p class="catalog-p"> $34,500 </p>
+            </div>
+        </div>
+        <div class="catalog-2 h-896">
+            <div class="catalgon-2-item">
+                <img src='{% static "content/catalog_item_13.svg" %}'>
+            </div>
+            <div class="catalgon-2-item">
+                <img src='{% static "content/catalog_item_14.svg" %}'>
+                <div class="w-270">
+                    <h2 class="catalog-h2"> Asheville Bracelet, Light Blue Enamel, Turquoise, Diamonds </h2>
+                    <p class="catalog-p"> $48,500 </p>
+                </div>
+            </div>
+            <div class="catalgon-2-item">
+                <img src='{% static "content/catalog_item_15.svg" %}'>
+                <div class="w-251">
+                    <h2 class="catalog-h2"> Asheville Earrings, White Enamel, Pink Opal, Diamonds </h2>
+                    <p class="catalog-p"> $36,500 </p>
+                </div>
+            </div>
+        </div>
+        <div class="align-button">
+            <a href="#">
+                <div class="button">
+                    <p class="text-button"> Load more </p>
+                </div>
+            </a>
+        </div>
+        <div class="pagination">
+
+        </div>
+    </main>
+
 </body>
 </html>
+
+{% endblock %}
