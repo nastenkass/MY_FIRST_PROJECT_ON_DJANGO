@@ -15,6 +15,10 @@ def order(request):
 def catalog(request):
     return render(request, 'catalog.html', {'title':'Каталог магазина'})
 
+def ok(request):
+    return render(request, 'ok.html', {'title':'Каталог магазина'})
+
+
 def lesson4(request):
     name = request.GET.get('name')
     return render(request, 'lesson4.html', {'name' : name,

@@ -16,6 +16,8 @@
 
     <main>
         <div class="full-container">
+            <form action="userorder/" method="post">
+                {% csrf_token %}
             <div class="full-container-1 w-727">
 
                 <h1 class="margin-t-100"> chekout </h1>
@@ -24,14 +26,14 @@
 
                     <div class="order-item-block-1">
                         <h2 class="margin-b-30"> contact information </h2>
-                        <input type="text" class="input_style_1 margin-b-30" placeholder="first name" />
-                        <input type="tel" class="input_style_1" placeholder="mobile phone"/>
+                        <input type="text" name="firstname" class="input_style_1 margin-b-30" placeholder="first name" />
+                        <input type="tel" name="phone" class="input_style_1" placeholder="mobile phone"/>
                     </div>
 
                     <div class="order-item-block-1">
                         <div class="invisible-34 margin-b-30"> </div>
-                        <input type="text" class="input_style_1 margin-b-30" placeholder="last name" />
-                        <input type="email" class="input_style_1" placeholder="email"/>
+                        <input type="text" name="lastname" class="input_style_1 margin-b-30" placeholder="last name" />
+                        <input type="email" name="email" class="input_style_1" placeholder="email"/>
                     </div>
 
                 </div>
@@ -40,14 +42,14 @@
 
                     <div class="order-item-block-1">
                         <h2 class="margin-b-30"> shipping address </h2>
-                        <input type="text" class="input_style_1 margin-b-30" placeholder="country/region" />
-                        <input type="text" class="input_style_1" placeholder="address"/>
+                        <input type="text" name="region" class="input_style_1 margin-b-30" placeholder="country/region" />
+                        <input type="text" name="adres" class="input_style_1" placeholder="address"/>
                     </div>
 
                     <div class="order-item-block-1">
                         <div class="invisible-34 margin-b-30"> </div>
-                        <input type="text" class="input_style_1 margin-b-30" placeholder="city" />
-                        <input type="email"class="input_style_1"  placeholder="postal code"/>
+                        <input type="text" name="city" class="input_style_1 margin-b-30" placeholder="city" />
+                        <input type="text" name="index" class="input_style_1"  placeholder="postal code"/>
                     </div>
 
                 </div>
@@ -60,7 +62,7 @@
 
                         <div class="order-item-block-2">
                             <div>
-                                <input type="radio" id="shipping_method_1" name="rb" class="custom-radio"/>
+                                <input type="radio" id="shipping_method_1" name="delivery" class="custom-radio"/>
                                 <label for="shipping_method_1"> express shipping </label>
                                 <p class="radio-hint"> Next day </p>
                             </div>
@@ -71,7 +73,7 @@
 
                         <div class="order-item-block-2">
                             <div>
-                                <input type="radio" id="shipping_method_2" name="rb" class="custom-radio"/>
+                                <input type="radio" id="shipping_method_2" name="delivery" class="custom-radio"/>
                                 <label for="shipping_method_2"> regular shipping </label>
                                 <p class="radio-hint"> 3-14 business days </p>
                             </div>
@@ -82,7 +84,7 @@
 
                         <div class="order-item-block-2">
                             <div>
-                                <input type="radio" id="shipping_method_3" name="rb" class="custom-radio" checked />
+                                <input type="radio" id="shipping_method_3" name="delivery" class="custom-radio" checked />
                                 <label for="shipping_method_3"> free shiping </label>
                                 <p class="radio-hint"> 7-30 business days </p>
                             </div>
@@ -139,7 +141,7 @@
                 </div>
 
                 <div class="confirmation margin-t-25">
-                    <input type="checkbox" id="confirmation" class="custom-checkbox">
+                    <input type="checkbox" name="accept" id="confirmation" class="custom-checkbox" value="False">
                     <label for="confirmation">By proceeding I accept  <span> &nbsp; terms and conditoins </span></label>
                 </div>
 
@@ -148,6 +150,7 @@
                 </div>
 
             </div>
+            </form>
 
 
 

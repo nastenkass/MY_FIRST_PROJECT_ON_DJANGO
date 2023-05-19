@@ -16,13 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from polls.controllers import index
+from polls.controllers import userorder
 
 urlpatterns = [
 #    path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
+    path('', index.index),
     path('index/', index.index),
     path('lesson4/', index.lesson4),
     path('order/', index.order),
     path('catalog/', index.catalog),
-
+    path('order/userorder/ok', index.ok),
+    path('order/userorder/', userorder.create),
 ]
