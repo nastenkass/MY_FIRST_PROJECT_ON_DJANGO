@@ -1,0 +1,45 @@
+{% extends 'templates.html' %}
+{% block body %}
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href='{% static "css/style_for_news.css" %}'>
+</head>
+<body>
+
+    <main>
+
+        <div class="full_block">
+
+            <p class="main_title"> news david webb </p>
+
+            {% for image in images %}
+
+            <div class="block_new">
+
+                <h1 class="caption"> {{ image.caption }}</h1>
+                <img src="{{ image.image.url }}" class="image" alt="{{ image.description }}">
+                <p class="description">{{ image.description }}</p>
+
+            </div>
+
+            {% empty %}
+            <p>Нет доступных изображений.</p>
+            {% endfor %}
+
+            <p class="main_title m-b-60"> thank you for your attention! </p>
+
+        </div>
+
+
+
+
+</main>
+</body>
+</html>
+
+{% endblock %}

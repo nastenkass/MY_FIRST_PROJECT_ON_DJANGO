@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap');
+
+*,*:before,*:after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+header, main{
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.full_block{
+    margin: 0 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.block_new{
+
+}
+
+.main_title{
+    margin-top: 60px;
+    margin-bottom: 0px;
+    font-family: 'Hina Mincho';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 66px;
+    text-transform: uppercase;
+    color: #000000;
+
+    align-self: center;
+}
+
+.image{
+    width: 1500px;
+    height: 360px;
+}
+
+.caption{
+    margin-bottom: 20px;
+    margin-top: 60px;
+    max-width: 1120px;
+
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 140.62%;
+    text-transform: uppercase;
+    color: #111111;
+}
+
+.description{
+    margin-top: 20px;
+    margin-bottom: 0px;
+    max-width: 1120px;
+
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.m-b-60{
+    margin-bottom: 60px;
+}

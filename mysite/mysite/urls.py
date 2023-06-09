@@ -17,6 +17,9 @@ from django.contrib import admin
 from django.urls import include, path
 from polls.controllers import index
 from polls.controllers import userorder
+from polls.views import add_image, image_list
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
 #    path('polls/', include('polls.urls')),
@@ -26,6 +29,11 @@ urlpatterns = [
     path('lesson4/', index.lesson4),
     path('order/', index.order),
     path('catalog/', index.catalog),
+    path('news/', image_list, name='image_list'),
     path('order/userorder/ok', index.ok),
     path('order/userorder/', userorder.create),
+    path('add_image/', add_image, name='add_image'),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
